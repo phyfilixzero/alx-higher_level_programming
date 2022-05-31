@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
-for x in range(0, 10):
-    for y in range(x + 1, 10):
-        if (not (x == 8 and y == 9)):
-            print("{}{}".format(x, y), end=", ")
+for i in range(0, 10):
+    for j in range(1, 10):
+        if i >= j:
+            continue
+        if i == 8 and j == 9:
+            print("{:d}{:d}".format(i, j))
         else:
-            print("{}{}".format(x, y))
+            print("{:d}{:d}".format(i, j), end=", ")
