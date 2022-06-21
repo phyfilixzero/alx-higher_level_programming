@@ -1,15 +1,18 @@
 #!/usr/bin/python3
+""" Module Sqaure """
+
+
 class Square:
-    """square"""
+    """ Square class defined by geometric shap
+
+        Attributes:
+            size (int): Size of square
+    """
     def __init__(self, size):
         """
-        initialize square attributes
+        Initialize methode
 
         Args:
-        size (int): size of square
-
-        Returns:
-        None
+            size (int): size of square
         """
-
         self.__size = size

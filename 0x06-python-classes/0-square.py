@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+""" Module Sqaure """
+
+
 class Square:
-    """square"""
-    def __init__(self):
-        """initialize square attributes"""
-        return None
+    """Empty Square class"""
+    pass

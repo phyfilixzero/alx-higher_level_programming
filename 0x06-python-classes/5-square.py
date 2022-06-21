@@ -1,66 +1,71 @@
 #!/usr/bin/python3
+""" Module Sqaure """
+
+
 class Square:
-    """square"""
+    """ Square class defined by geometric shap
+
+        Attributes:
+            size (int): Size of square
+    """
     def __init__(self, size=0):
-        """
-        initialize square size
-
+        """initializes the square
         Args:
-            size (int): size of square
+            size (int): size of a side of the square
 
-        Returns: None
+        Returns:
+            None
         """
+        self.size = size
 
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+    def area(self):
+        """
+        set square square area
+
+        Return:
+            the current square area (int)
+        """
+        return self.__size ** 2
 
     @property
     def size(self):
+        """
+        getter of size
+
+        Return:
+            Size of square
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        set size
+        Setter of size
 
         Args:
-            value (int): value to assign size
-
-        Returns: None
+            size (int): size of a side of the square
+        Raises
+            TypeError: if size is not int
+            ValueError: size less than 0
+        Returns:
+            None
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
-
-    def area(self):
-        """
-        calculate area of square
-
-        Args: None
-
-        Returns: area of square
-        """
-
-        return self.__size * self.__size
+                raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
     def my_print(self):
         """
-        prints square to stdout using #
+        print a square from the size using ##
 
-        Args: None
-
-        Returns: None
+        Returns:
+            None
         """
-
         if self.__size == 0:
             print()
         else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end="")
-                print()
+            for x in range(self.size):
+                    print("#" * self.size)
